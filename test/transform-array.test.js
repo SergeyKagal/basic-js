@@ -45,7 +45,9 @@ describe('Transform array', () => {
         it.optional('doesn\'t affect simple arrays', () => {
             for (let i = 0; i < 50; i += 1) {
                 const randArr = createSimpleArr(50);
+               // console.log(randArr);
                 assert.deepStrictEqual(transform(randArr), randArr);
+               
             }
         });
 
@@ -93,6 +95,7 @@ describe('Transform array', () => {
             for(let i = 0; i < 50; i += 1) {
                 const { input, output } = createSample(i);
                 assert.deepStrictEqual(transform(input), output);
+               // console.log(input,output,'--------------------------------------');
             }   
         });
 
