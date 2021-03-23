@@ -4,7 +4,12 @@ const  myObject =
     sayHi() {console.log('Hello')},
     sayBue() {console.log('Good Bue!')},
     
-    addItem(value) {this.items.push(value)}
+    addItem(value) 
+    {
+        if(!value)this.items.push('(  )');
+        else this.items.push('( '+value.toString()+' )');
+    return this;
+    }
 
 
 
@@ -14,5 +19,5 @@ const  myObject =
 myObject.sayHi();
 myObject.sayBue();
 
-addItem(455);
+myObject.addItem();
 console.log(myObject.items);
