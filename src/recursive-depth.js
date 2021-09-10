@@ -12,7 +12,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * depthCalc.calculateDepth([[[]]]) => 3
  *
  */
-module.exports = class DepthCalculator {
+export default class DepthCalculator {
   calculateDepth(array, cnt=1) {
     
     var result = cnt;
