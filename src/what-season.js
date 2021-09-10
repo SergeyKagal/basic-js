@@ -11,7 +11,7 @@ import { NotImplementedError } from '../extensions/index.js';
  * getSeason(new Date(2020, 02, 31)) => 'spring'
  * 
  */
-export default function getSeason( date ) {
+export default function getSeason( d ) {
  if(d==null)return 'Unable to determine the time of year!';
   if(Object.prototype.toString.call(d)!='[object Date]') throw new Error ;
  
